@@ -3,12 +3,13 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/seo"
+import { Layout } from "../components/Layout"
 
 const IndexPage = () => (
-  <>
+  <Layout>
     <h1>Welcome to my site</h1>
     <p>Work in progress...</p>
-  </>
+  </Layout>
 )
 
 /**
