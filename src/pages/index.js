@@ -1,15 +1,30 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/seo"
-import { Layout } from "../components/Layout"
 
 const IndexPage = () => (
-  <Layout>
-    <h1 className="text-3xl">Welcome to my site</h1>
-    <p>Work in progress...</p>
-  </Layout>
+  <div className="flex flex-col items-center gap-2 px-2 self-center">
+    <h1 className="text-4xl sm:text-6xl font-bold text-center">Kyle Warner</h1>
+    <h2 className="text-2xl sm:text-4xl text-violet-600 font-semibold text-center">
+      Full Stack Web Developer
+    </h2>
+
+    <p className="max-w-prose text-center lg:text-lg">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa minima
+      deserunt impedit, pariatur, nemo modi maiores recusandae placeat
+      molestiae, laborum ratione perspiciatis saepe maxime at hic deleniti enim.
+      Maxime, labore!
+    </p>
+
+    <div className="flex gap-5 mt-6">
+      <button className="px-4 py-3 border-4 border-violet-900 rounded-xl">
+        HelloWorld
+      </button>
+      <button className="px-4 py-3 border-4 border-violet-900 rounded-xl">
+        HelloWorld
+      </button>
+    </div>
+  </div>
 )
 
 /**

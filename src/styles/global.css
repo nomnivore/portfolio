@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-gray-900 text-gray-300;
+}
+
+
+.link-hover {
+  @apply hover:text-violet-500 transition-all hover:font-bold cursor-pointer;
+}

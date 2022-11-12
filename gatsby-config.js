@@ -38,7 +38,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`inter`],
+      },
+    },
 
-    "gatsby-plugin-postcss",
+    `gatsby-plugin-postcss`,
   ],
 }
