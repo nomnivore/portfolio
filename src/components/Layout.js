@@ -1,7 +1,7 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { Header } from "./Header"
 import { useEffect } from "react"
+import { BubbleEffect } from "./BubbleEffect"
 
 export const Layout = ({ children }) => {
   useEffect(() => {
@@ -12,14 +12,19 @@ export const Layout = ({ children }) => {
   }, [])
 
   return (
-    <div id="app" className="min-h-screen flex flex-col">
-      <Header />
+    <>
+      <div id="app" className="min-h-screen relative flex flex-col z-20">
+        <Header />
 
-      <main className="mx-auto mt-4 flex-grow flex">{children}</main>
+        <main className="mx-auto mt-4 flex-grow flex">{children}</main>
 
-      <footer className="w-screen p-2 bg-gradient-to-t from-gray-950">
-        <span className="text-sm">&copy; 2022</span>
-      </footer>
-    </div>
+        <footer className="w-screen p-2 bg-gradient-to-t from-gray-950">
+          <div className="w-full mx-auto flex justify-between">
+            <span className="text-sm">&copy; 2022</span>
+          </div>
+        </footer>
+      </div>
+      <BubbleEffect />
+    </>
   )
 }

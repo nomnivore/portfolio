@@ -5,6 +5,6 @@ const ProjectsPage = () => {
   return <p className="text-center max-w-prose">Contacts coming soon...</p>
 }
 
-export const Head = () => <Seo title="Projects" />
+export const Head = () => <Seo title="Contact" />
 
 export default ProjectsPage

@@ -35,7 +35,7 @@ export const Header = () => {
               <Link
                 key={link.url}
                 to={link.url}
-                className="transition-all link-hover align-bottom px-4 py-2 hover:bg-gray-800 rounded-lg flex items-center"
+                className="transition-all link-hover align-middle px-4 py-2 hover:bg-gray-800 rounded-lg flex items-center"
               >
                 {link.text}
               </Link>
@@ -44,7 +44,7 @@ export const Header = () => {
         </div>
         <div className="flex justify-end">
           <a
-            to="https://github.com/Nomnivore"
+            href="https://github.com/Nomnivore"
             className="link-hover rounded-lg flex items-center px-1 hover:bg-gray-800"
           >
             <DiGithubBadge size="32px" className="ml-auto" />
