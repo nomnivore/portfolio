@@ -49,22 +49,23 @@ export const BubbleEffect = () => {
     const throttledBubbles = _.throttle(createBubble, 300)
 
     const handleMouseMove = e => {
-      throttledBubbles(e)
+      setTimeout(() => throttledBubbles(e), 50)
     }
 
     const idleBubbles = setInterval(() => {
-      throttledBubbles(
+      createBubble(
         {
           clientX: _.random(window.innerWidth),
           clientY: _.random(window.innerHeight),
         },
         {
+          initSize: 200,
           variance: 50,
-          ttl: 4000,
-          scale: 13,
+          ttl: 6000,
+          scale: 4,
         }
       )
-    }, 500)
+    }, 2000)
 
     document
       .getElementsByTagName("body")[0]
