@@ -5,9 +5,9 @@ const useToggle = (initial = false) => {
 
   const toggle = useCallback(
     forceState =>
-      forceState === undefined
-        ? setState(state => !state)
-        : setState(forceState),
+      typeof forceState === "boolean"
+        ? setState(forceState)
+        : setState(state => !state),
     []
   )
 
