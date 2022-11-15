@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
-import _ from "underscore"
+import throttle from "underscore/modules/throttle"
+import random from "underscore/modules/random"
 import "../styles/BubbleEffect.css"
 
 const Bubble = ({
@@ -34,8 +35,8 @@ const Bubble = ({
         left: posX - initSize / 2,
         top: posY - initSize / 2,
         animationDuration: `${ttl + 5}ms`,
-        "--move-x": `${_.random(-variance, variance)}%`,
-        "--move-y": `${_.random(-variance, variance)}%`,
+        "--move-x": `${random(-variance, variance)}%`,
+        "--move-y": `${random(-variance, variance)}%`,
         "--scale": scale,
       }}
     ></div>
@@ -46,7 +47,7 @@ export const BubbleEffect = () => {
   const [bubbles, setBubbles] = useState([])
 
   useEffect(() => {
-    const throttledBubbles = _.throttle(createBubble, 300)
+    const throttledBubbles = throttle(createBubble, 300)
 
     const handleMouseMove = e => {
       setTimeout(() => throttledBubbles(e), 50)
@@ -55,8 +56,8 @@ export const BubbleEffect = () => {
     const idleBubbles = setInterval(() => {
       createBubble(
         {
-          clientX: _.random(window.innerWidth),
-          clientY: _.random(window.innerHeight),
+          clientX: random(window.innerWidth),
+          clientY: random(window.innerHeight),
         },
         {
           initSize: 200,

@@ -20,7 +20,7 @@ export const Layout = ({ children }) => {
 
         <footer className="w-screen p-2 bg-gradient-to-t from-gray-950">
           <div className="w-full mx-auto flex justify-between">
-            <span className="text-sm">&copy; 2022</span>
+            <span className="text-sm text-gray-400">&copy; 2022</span>
           </div>
         </footer>
       </div>
