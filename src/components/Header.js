@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import useToggle from "../hooks/useToggle"
 import { DiGithubBadge } from "react-icons/di"
 import { HiBars3 } from "react-icons/hi2"
-import { StaticImage } from "gatsby-plugin-image"
 
 const navLinks = [
   {
@@ -66,12 +65,13 @@ export const Header = () => {
             </a>
           </div>
 
+          {/* TODO: extract to MobileNav component */}
           <div className="flex md:hidden justify-end">
             <button onClick={() => toggleShowMobileMenu()}>
               <HiBars3 size="32px" />
             </button>
             {/* mobile nav menu items */}
-            {/* this would be a great place to implement framer motion */}
+            {/* TODO: implement framer motion */}
             <div
               className={`flex-col gap-3 absolute top-11 p-3 py-5 backdrop-blur-md border-4 border-gray-800 rounded-md shadow-xl rounded-tr-none text-xl transition-all ${
                 showMobileMenu ? "flex" : "hidden"

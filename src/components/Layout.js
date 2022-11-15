@@ -2,6 +2,7 @@ import * as React from "react"
 import { Header } from "./Header"
 import { useEffect } from "react"
 import { BubbleEffect } from "./BubbleEffect"
+import { Shutter } from "./Shutter"
 
 export const Layout = ({ children }) => {
   useEffect(() => {
@@ -13,6 +14,7 @@ export const Layout = ({ children }) => {
 
   return (
     <>
+      <Shutter />
       <div id="app" className="min-h-screen relative flex flex-col z-20">
         <Header />
 
