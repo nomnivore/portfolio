@@ -18,6 +18,14 @@ const Bubble = ({
   const moveX = random(-variance, variance)
   const moveY = random(-variance, variance)
 
+  // using setTimeout instead of motion event due to bubbles collecting
+  // while the tab is loaded but not opened
+  useEffect(() => {
+    setTimeout(() => {
+      handleDelete(id)
+    }, ttl - 1)
+  }, [handleDelete, id, ttl])
+
   return (
     <motion.div
       className={`rounded-full ${twColor} absolute pointer-events-none`}
@@ -38,7 +46,6 @@ const Bubble = ({
         ease: "easeOut",
         duration: ttl / 1000, // ms -> s
       }}
-      onAnimationComplete={() => handleDelete(id)}
     ></motion.div>
   )
 }
