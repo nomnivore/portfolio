@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { DiGithubBadge } from "react-icons/di"
 import { MobileNav } from "./MobileNav"
+import { motion } from "framer-motion"
 
 const navLinks = [
   {
@@ -30,13 +31,19 @@ export const Header = () => {
     <header className="w-screen min-h-[66px] p-3 flex gap-2 bg-gradient-to-b from-gray-950">
       <div className="grid grid-cols-3 w-full max-w-7xl mx-auto">
         <div className="flex justify-start">
-          <Link
-            to="/"
-            className="text-2xl md:text-3xl font-bold tracking-wider link-hover flex items-center font-mono"
+          <motion.div
+            className="flex"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
           >
-            {/* <StaticImage src="../images/logo.png" height="28" /> */}
-            {"<KW>"}
-          </Link>
+            <Link
+              to="/"
+              className="text-2xl md:text-3xl font-bold tracking-wider link-hover flex items-center font-mono"
+            >
+              {/* <StaticImage src="../images/logo.png" height="28" /> */}
+              {"<KW>"}
+            </Link>
+          </motion.div>
         </div>
         <div className="flex items-center justify-center">
           <div className="hidden md:flex justify-center gap-5">
@@ -54,12 +61,14 @@ export const Header = () => {
         </div>
         <div className="flex justify-end">
           <div className="hidden md:flex justify-end">
-            <a
+            <motion.a
               href={mobileOnlyLinks[0].url}
               className="link-hover rounded-lg flex items-center px-1 hover:bg-gray-800"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
             >
               <DiGithubBadge size="32px" className="" />
-            </a>
+            </motion.a>
           </div>
 
           <MobileNav items={[...navLinks, ...mobileOnlyLinks]} />
