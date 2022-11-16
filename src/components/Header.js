@@ -63,9 +63,9 @@ export const Header = () => {
           <div className="hidden md:flex justify-end">
             <motion.a
               href={mobileOnlyLinks[0].url}
-              className="link-hover rounded-lg flex items-center px-1 hover:bg-gray-800"
+              className="link-hover rounded-lg flex items-center px-1"
               whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
+              whileTap={{ scale: 0.95 }}
             >
               <DiGithubBadge size="32px" className="" />
             </motion.a>

@@ -1,5 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
+import random from "underscore/modules/random"
 
 export const HoverText = ({ text, className = "" }) => {
   const chars = text.replaceAll(" ", "\u00A0").split("")
