@@ -42,7 +42,13 @@ const IndexPage = () => (
         }}
       >
         <Link to="/projects" className="px-4 py-4 flex items-center gap-2">
-          See my work <HiArrowRight size="20px" />
+          See my work
+          <motion.div
+            variants={{ hover: { x: [0, 3, 0] } }}
+            transition={{ duration: 0.4 }}
+          >
+            <HiArrowRight size="20px" />
+          </motion.div>
         </Link>
       </motion.div>
     </div>
