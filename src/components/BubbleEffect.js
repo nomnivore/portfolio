@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import throttle from "underscore/modules/throttle"
 import random from "underscore/modules/random"
-import "../styles/BubbleEffect.css"
+// import "../styles/BubbleEffect.css"
 import { motion } from "framer-motion"
 
 const Bubble = ({
