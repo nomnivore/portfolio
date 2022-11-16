@@ -28,7 +28,7 @@ const mobileOnlyLinks = [
 
 export const Header = () => {
   return (
-    <header className="w-screen min-h-[66px] p-3 flex gap-2 bg-gradient-to-b from-gray-950">
+    <header className="min-h-[66px] p-3 flex gap-2 bg-gradient-to-b from-gray-950">
       <div className="grid grid-cols-3 w-full max-w-7xl mx-auto">
         <div className="flex justify-start">
           <motion.div
