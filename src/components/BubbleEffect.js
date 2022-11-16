@@ -2,44 +2,44 @@ import React, { useEffect, useState } from "react"
 import throttle from "underscore/modules/throttle"
 import random from "underscore/modules/random"
 import "../styles/BubbleEffect.css"
+import { motion } from "framer-motion"
 
 const Bubble = ({
   handleDelete,
   posX,
   posY,
   id,
-  initSize,
-  variance,
-  ttl,
-  twColor,
-  scale,
+  initSize = 60, // px
+  variance = 150, // %
+  ttl = 2500, // ms
+  twColor = "bg-blue-900",
+  scale = 5,
 }) => {
-  initSize ||= 60 // px
-  variance ||= 150 // %
-  ttl ||= 2500 // ms
-  twColor ||= "bg-blue-900"
-  scale ||= 5
-
-  useEffect(() => {
-    setTimeout(() => {
-      handleDelete(id)
-    }, ttl)
-  }, [handleDelete, id, ttl])
+  const moveX = random(-variance, variance)
+  const moveY = random(-variance, variance)
 
   return (
-    <div
-      className={`rounded-full ${twColor} absolute bubble pointer-events-none`}
-      style={{
+    <motion.div
+      className={`rounded-full ${twColor} absolute pointer-events-none`}
+      initial={{
         height: initSize,
         width: initSize,
         left: posX - initSize / 2,
         top: posY - initSize / 2,
-        animationDuration: `${ttl + 5}ms`,
-        "--move-x": `${random(-variance, variance)}%`,
-        "--move-y": `${random(-variance, variance)}%`,
-        "--scale": scale,
+        opacity: 0.1,
       }}
-    ></div>
+      animate={{
+        x: moveX,
+        y: moveY,
+        scale: scale,
+        opacity: 0,
+      }}
+      transition={{
+        ease: "easeOut",
+        duration: ttl / 1000, // ms -> s
+      }}
+      onAnimationComplete={() => handleDelete(id)}
+    ></motion.div>
   )
 }
 
