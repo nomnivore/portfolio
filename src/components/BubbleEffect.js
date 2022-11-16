@@ -115,7 +115,7 @@ export const BubbleEffect = () => {
   }
 
   return (
-    <div className="absolute top-0 left-0 w-screen h-screen z-10 overflow-hidden bubble-wrapper">
+    <div className="fixed top-0 left-0 w-screen h-screen z-10 overflow-hidden bubble-wrapper">
       {bubbles}
     </div>
   )
