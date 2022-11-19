@@ -7,6 +7,16 @@ import { motion } from "framer-motion"
 import Seo from "../components/seo"
 import { MotionPage } from "../components/MotionPage"
 
+
+const pageContent = {
+  title: "Kyle Warner",
+  subtitle: "Full Stack Web Developer",
+  body: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa minima
+      deserunt impedit, pariatur, nemo modi maiores recusandae placeat
+      molestiae, laborum ratione perspiciatis saepe maxime at hic deleniti enim.
+      Maxime, labore!`,
+}
+
 const ctaProps = {
   variants: {
     initial: { backgroundPosition: "0% 0%" },
@@ -28,20 +38,14 @@ const IndexPage = () => (
     className="flex flex-col items-center gap-2 px-2 self-center"
   >
     <h1 className="text-5xl md:text-6xl font-bold text-center my-2">
-      <HoverText text="Kyle Warner" className="hover:text-violet-600" />
+      <HoverText text={pageContent.title} className="hover:text-violet-600" />
     </h1>
     <h2 className="text-2xl md:text-4xl text-violet-600 font-semibold text-center">
-      <HoverText
-        text="Full Stack Web Developer"
-        className="hover:text-gray-300"
-      />
+      <HoverText text={pageContent.subtitle} className="hover:text-gray-300" />
     </h2>
 
     <p className="max-w-prose text-center tex-lg md:text-xl">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa minima
-      deserunt impedit, pariatur, nemo modi maiores recusandae placeat
-      molestiae, laborum ratione perspiciatis saepe maxime at hic deleniti enim.
-      Maxime, labore!
+      {pageContent.body}
     </p>
 
     <div className="flex gap-5 mt-6 flex-wrap justify-center">
@@ -70,8 +74,8 @@ const IndexPage = () => (
         >
           See my work
           <motion.div
-            variants={{ hover: { x: [0, 3, 0] } }}
-            transition={{ duration: 0.4 }}
+            variants={{ hover: { x: [0, 3, 0, 3, 0] } }}
+            transition={{}}
           >
             <HiArrowRight size="20px" />
           </motion.div>
