@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { DiGithubBadge } from "react-icons/di"
 import { MobileNav } from "./MobileNav"
-import { motion } from "framer-motion"
+import { motion, useAnimationControls } from "framer-motion"
 
 const navLinks = [
   {
@@ -27,8 +27,29 @@ const mobileOnlyLinks = [
 ]
 
 export const Header = () => {
+  const controls = useAnimationControls()
+  const [mobileNavHeight, setMobileNavHeight] = useState(0)
+
   return (
-    <header className="min-h-[66px] p-3 flex gap-2 bg-gradient-to-b from-gray-950">
+    <motion.header
+      className="min-h-[66px] p-3 flex gap-2 z-20 bg-gradient-to-b from-gray-950"
+      animate={controls}
+      variants={{
+        mobileShow: {
+          y: mobileNavHeight,
+          backgroundColor: "rgba(17, 24, 39, 1)", // adopts a darker color that is readable over page content without replacing tw's gradient
+        },
+
+        mobileHide: {
+          y: 0,
+          backgroundColor: "rgba(17, 24, 39, 0)",
+        },
+      }}
+      transition={{
+        type: "tween",
+        duration: 0.3,
+      }}
+    >
       <div className="grid grid-cols-3 w-full max-w-7xl mx-auto">
         <div className="flex justify-start">
           <motion.div
@@ -71,9 +92,13 @@ export const Header = () => {
             </motion.a>
           </div>
 
-          <MobileNav items={[...navLinks, ...mobileOnlyLinks]} />
+          <MobileNav
+            items={[...navLinks, ...mobileOnlyLinks]}
+            controls={controls}
+            setHeight={setMobileNavHeight}
+          />
         </div>
       </div>
-    </header>
+    </motion.header>
   )
 }
