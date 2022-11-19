@@ -5,6 +5,7 @@ import { HiArrowRight, HiOutlineEnvelope } from "react-icons/hi2"
 import { motion } from "framer-motion"
 
 import Seo from "../components/seo"
+import { MotionPage } from "../components/MotionPage"
 
 const ctaProps = {
   variants: {
@@ -22,7 +23,10 @@ const ctaProps = {
 }
 
 const IndexPage = () => (
-  <div className="flex flex-col items-center gap-2 px-2 self-center">
+  <MotionPage
+    key="index"
+    className="flex flex-col items-center gap-2 px-2 self-center"
+  >
     <h1 className="text-5xl md:text-6xl font-bold text-center my-2">
       <HoverText text="Kyle Warner" className="hover:text-violet-600" />
     </h1>
@@ -74,7 +78,7 @@ const IndexPage = () => (
         </Link>
       </motion.div>
     </div>
-  </div>
+  </MotionPage>
 )
 
 /**

@@ -1,8 +1,13 @@
 import React from "react"
+import { MotionPage } from "../components/MotionPage"
 import Seo from "../components/seo"
 
 const ProjectsPage = () => {
-  return <p className="text-center max-w-prose">Projects coming soon...</p>
+  return (
+    <MotionPage key="projects" className="text-center max-w-prose">
+      Projects coming soon...
+    </MotionPage>
+  )
 }
 
 export const Head = () => <Seo title="Projects" />

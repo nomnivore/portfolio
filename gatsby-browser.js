@@ -10,8 +10,15 @@ import "./src/styles/global.css"
 
 import React from "react"
 import { Layout } from "./src/components/Layout"
+import { AnimatePresence } from "framer-motion"
 
 // sets a constant layout that wont re-mount on each page change
 export const wrapPageElement = ({ element, props }) => {
-  return <Layout {...props}>{element}</Layout>
+  return (
+    <Layout {...props}>
+      <AnimatePresence initial={false} mode="wait">
+        {element}
+      </AnimatePresence>
+    </Layout>
+  )
 }
