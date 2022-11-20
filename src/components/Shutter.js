@@ -14,7 +14,7 @@ export const Shutter = () => {
       className="fixed top-0 left-0 w-full h-full bg-neutral-900 z-50 flex justify-center items-center shadow-2xl"
       initial={{ y: 0 }}
       animate={{ y: "-100%" }}
-      transition={{ delay: 2, duration: 2, ease: [0.39, 0.1, 0.25, 0.9] }}
+      transition={{ delay: 1.5, duration: 1.5, ease: [0.39, 0.1, 0.25, 0.9] }}
       onAnimationComplete={() => toggleVisible(false)}
     >
       <motion.div
