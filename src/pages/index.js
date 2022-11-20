@@ -33,22 +33,17 @@ const ctaProps = {
 }
 
 const IndexPage = () => (
-  <MotionPage
-    key="index"
-    className="flex flex-col items-center gap-2 px-2 self-center mx-auto"
-  >
-    <h1 className="text-5xl md:text-6xl font-bold text-center my-2">
+  <MotionPage key="index" className="flex flex-col gap-2 px-2 self-center mx-1">
+    <h1 className="text-5xl md:text-6xl font-bold my-2">
       <HoverText text={pageContent.title} className="hover:text-violet-600" />
     </h1>
-    <h2 className="text-2xl md:text-4xl text-violet-600 font-semibold text-center">
+    <h2 className="text-[1.375rem] md:text-4xl text-violet-600 font-semibold">
       <HoverText text={pageContent.subtitle} className="hover:text-gray-300" />
     </h2>
 
-    <p className="max-w-prose text-center sm:mx-4 md:text-xl">
-      {pageContent.body}
-    </p>
+    <p className="max-w-prose md:text-xl">{pageContent.body}</p>
 
-    <div className="flex gap-5 mt-6 flex-wrap justify-center">
+    <div className="flex gap-5 mt-6 flex-wrap justify-start">
       <motion.div
         className="flex rounded-xl p-1 bg-size-200 bg-gradient-to-tl from-purple-800 via-purple-800 to-indigo-600"
         {...ctaProps}
