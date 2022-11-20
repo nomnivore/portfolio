@@ -35,7 +35,7 @@ const ctaProps = {
 const IndexPage = () => (
   <MotionPage
     key="index"
-    className="flex flex-col items-center gap-2 px-2 self-center"
+    className="flex flex-col items-center gap-2 px-2 self-center mx-auto"
   >
     <h1 className="text-5xl md:text-6xl font-bold text-center my-2">
       <HoverText text={pageContent.title} className="hover:text-violet-600" />

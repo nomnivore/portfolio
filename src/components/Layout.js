@@ -18,7 +18,9 @@ export const Layout = ({ children }) => {
       <div id="app" className="min-h-screen relative flex flex-col z-20">
         <Header />
 
-        <main className="mx-auto mt-4 flex-grow flex z-10">{children}</main>
+        <main className="container px-1 mx-auto mt-4 flex-grow flex z-10">
+          {children}
+        </main>
 
         <footer className="flex p-2 bg-gradient-to-t from-gray-950">
           <div className="w-full mx-auto flex justify-between">

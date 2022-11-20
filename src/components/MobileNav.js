@@ -64,7 +64,7 @@ export const MobileNav = ({ items, controls, setHeight }) => {
         {items.map(link => {
           const props = {
             key: link.url,
-            className: "transition-all link-hover py-3 px-6 ml-auto",
+            className: "transition-all link-hover py-3 px-6 ml-auto text-lg",
           }
 
           if (link.url.startsWith("/"))
@@ -73,7 +73,7 @@ export const MobileNav = ({ items, controls, setHeight }) => {
                 to={link.url}
                 {...props}
                 onClick={handleMenuIconClick}
-                activeClassName="text-violet-500"
+                activeClassName="text-violet-500 font-bold"
               >
                 {link.text}
               </Link>
