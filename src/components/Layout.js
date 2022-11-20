@@ -1,24 +1,28 @@
-import * as React from "react"
+import React, { useRef } from "react"
 import { Header } from "./Header"
 import { useEffect } from "react"
 import { BubbleEffect } from "./BubbleEffect"
 import { Shutter } from "./Shutter"
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, location }) => {
+  const currentPage = location ? location.pathname : ""
+  const firstLoad = useRef(true)
+  const isIndex = currentPage === "/"
+
   useEffect(() => {
-    console.log("mounted")
-    return () => {
-      console.log("unmounted")
-    }
+    firstLoad.current = false
   }, [])
+
+  const renderShutter = () =>
+    firstLoad.current && isIndex ? <Shutter /> : null
 
   return (
     <>
-      <Shutter />
+      {renderShutter()}
       <div id="app" className="min-h-screen relative flex flex-col z-20">
         <Header />
 
-        <main className="container px-1 mx-auto mt-4 flex-grow flex z-10">
+        <main className="container lg:max-w-screen-lg px-1 sm:px-4 mx-auto mt-4 flex-grow flex z-10">
           {children}
         </main>
 

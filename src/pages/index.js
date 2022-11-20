@@ -11,10 +11,10 @@ import { MotionPage } from "../components/MotionPage"
 const pageContent = {
   title: "Kyle Warner",
   subtitle: "Full Stack Web Developer",
-  body: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa minima
-      deserunt impedit, pariatur, nemo modi maiores recusandae placeat
-      molestiae, laborum ratione perspiciatis saepe maxime at hic deleniti enim.
-      Maxime, labore!`,
+  body: `Hi, I'm a US-based software development student graduating in May 2023 and currently
+        seeking remote work. I have a passion for building intuitive user experiences
+        and writing quality code that helps boost overall productivity. I'm always interested
+        in learning new technologies and growing my skillset as a developer. Let's talk!`,
 }
 
 const ctaProps = {
@@ -44,7 +44,7 @@ const IndexPage = () => (
       <HoverText text={pageContent.subtitle} className="hover:text-gray-300" />
     </h2>
 
-    <p className="max-w-prose text-center tex-lg md:text-xl">
+    <p className="max-w-prose text-center sm:mx-4 md:text-xl">
       {pageContent.body}
     </p>
 

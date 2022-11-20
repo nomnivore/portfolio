@@ -61,7 +61,6 @@ export const Header = () => {
               to="/"
               className="text-2xl md:text-3xl font-bold tracking-wider link-hover flex items-center font-mono"
             >
-              {/* <StaticImage src="../images/logo.png" height="28" /> */}
               {"<KW>"}
             </Link>
           </motion.div>
