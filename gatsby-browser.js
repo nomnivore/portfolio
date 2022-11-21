@@ -17,9 +17,7 @@ export const wrapPageElement = ({ element, props }) => {
   return (
     <MotionConfig reducedMotion="user">
       <Layout {...props}>
-        <AnimatePresence initial={false} mode="wait">
-          {element}
-        </AnimatePresence>
+        <AnimatePresence mode="wait">{element}</AnimatePresence>
       </Layout>
     </MotionConfig>
   )

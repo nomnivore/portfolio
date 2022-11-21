@@ -18,7 +18,7 @@ export const Layout = ({ children, location }) => {
 
   return (
     <>
-      {renderShutter()}
+      {/* {renderShutter()} */}
       <div id="app" className="min-h-screen relative flex flex-col z-20">
         <Header />
 
