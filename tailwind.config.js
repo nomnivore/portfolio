@@ -26,5 +26,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar"),
+    require("tailwindcss-text-fill-stroke"), // "bold" hover effect with better browser compatibility
+  ],
 }

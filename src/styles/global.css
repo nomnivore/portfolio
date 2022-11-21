@@ -8,5 +8,5 @@ body {
 
 
 .link-hover {
-  @apply hover:text-violet-500 transition-colors hover:font-bold cursor-pointer;
+  @apply hover:text-violet-500 transition-colors cursor-pointer hover:text-stroke hover:text-stroke-violet-500;
 }
