@@ -60,7 +60,7 @@ const ContactPage = () => {
       </motion.div>
       <div className="">
         <motion.div
-          className="bg-gray-950 rounded-xl drop-shadow-lg p-6 flex flex-col gap-4 items-center md:flex-row max-w-fit md:px-10 md:pr-32"
+          className="bg-gray-950 rounded-xl drop-shadow-lg p-6 flex flex-col gap-4 items-center sm:flex-row max-w-fit sm:px-10 sm:pr-32"
           variants={{
             out: {
               y: "20%",
@@ -74,8 +74,9 @@ const ContactPage = () => {
           initial="out"
           animate="in"
           transition={{
+            delay: 0.05,
             duration: 0.3,
-            delayChildren: 0.2,
+            delayChildren: 0.25,
             staggerChildren: 0.1,
           }}
         >
@@ -90,7 +91,7 @@ const ContactPage = () => {
               {pageContent.cardName}
             </p>
           </div>
-          <div className="flex gap-2 md:flex-col">
+          <div className="flex gap-2 sm:flex-col">
             {cardLinks.map(link => (
               <motion.a
                 href={link.url}
@@ -114,7 +115,7 @@ const ContactPage = () => {
                 }}
               >
                 <link.icon size="32" />
-                <span className="hidden md:inline text-lg">{link.name}</span>
+                <span className="hidden sm:inline text-lg">{link.name}</span>
               </motion.a>
             ))}
           </div>

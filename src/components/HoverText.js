@@ -1,7 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 
-export const HoverText = ({ text, className = "" }) => {
+export const HoverText = ({ text, className = "", variants }) => {
   const chars = text.replaceAll(" ", "\u00A0").split("")
 
   return chars.map((char, idx) => (
@@ -9,6 +9,7 @@ export const HoverText = ({ text, className = "" }) => {
       layout
       key={idx}
       className={`inline-block cursor-default ${className}`}
+      variants={variants}
       whileHover={{ scale: 1.2 }}
       transition={{ type: "spring", bounce: 0.5 }}
     >

@@ -4,7 +4,6 @@ import useToggle from "../hooks/useToggle"
 // import "../styles/Shutter.css"
 import { motion } from "framer-motion"
 
-// TODO: integrate framer-motion here
 export const Shutter = () => {
   const shutterRef = useRef(null)
   const [visible, toggleVisible] = useToggle(true)

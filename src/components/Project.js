@@ -28,8 +28,7 @@ const badgeStyles = [
   "bg-sky-900 border-sky-500 text-sky-100",
   "bg-yellow-900 border-yellow-500 text-yellow-100",
 ]
-// TODO: make it use props
-// TODO: add like 3-4 badge colors that are either cycled or randomized (probably cycled?)
+
 const projVariants = {
   off: {
     x: "25%",
@@ -74,7 +73,6 @@ export const Project = ({
   badges = badges.split(",")
   const data = useStaticQuery(previewQuery)
   const previewImg = data?.photos?.edges?.find(img => img.node.base === image)
-  console.log(previewImg)
   return (
     <motion.div
       variants={projVariants}
