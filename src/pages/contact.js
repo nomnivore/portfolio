@@ -37,7 +37,15 @@ const cardLinks = [
 const ContactPage = () => {
   return (
     <MotionPage key="contact" className="mx-3 self-center flex flex-col gap-2">
-      <div className="flex flex-col">
+      <motion.div
+        className="flex flex-col"
+        initial={{
+          y: "15%",
+        }}
+        animate={{
+          y: "0",
+        }}
+      >
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
           {pageContent.title}
         </h1>
@@ -49,7 +57,7 @@ const ContactPage = () => {
             {pageContent.contactEmail}
           </a>
         </p>
-      </div>
+      </motion.div>
       <div className="">
         <motion.div
           className="bg-gray-950 rounded-xl drop-shadow-lg p-6 flex flex-col gap-4 items-center md:flex-row max-w-fit md:px-10 md:pr-32"
