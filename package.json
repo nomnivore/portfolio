@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "kw-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Web dev portfolio made using Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "gh/nomnivore",
   "dependencies": {
     "framer-motion": "^7.6.7",
     "gatsby": "^5.0.0",
