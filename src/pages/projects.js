@@ -20,10 +20,10 @@ const projects = [
   },
   {
     title: "React Training Module",
-    desc: `Created for CIT255 class at NMC. Groups were tasked with creating educational material
+    desc: `Created for CIT255 course at NMC. Groups were tasked with creating educational material
           for learning a new technology not previously covered in the program, including a lecture,
           demonstration, and short assessment. I created a module for learning React, setting up a
-          development environment with Vite, and building a Tic-Tac-Toe game that combines all learning outcomes.`,
+          development environment with Vite, and building a Tic-Tac-Toe game that demonstrates all learning outcomes.`,
     sourceUrl: "https://github.com/Nomnivore/react-tictactoe",
     liveUrl: "https://nomnivore.github.io/react-tictactoe/",
     image: "tictactoe.png",
@@ -32,7 +32,7 @@ const projects = [
   {
     title: "The Arkade",
     desc: `A collection of three games using core web technologies created for the
-          CIT190 - JS & jQuery class at NMC. Games include a fully-featured Sudoku game leveraging
+          CIT190 - JS & jQuery course at NMC. Games include a fully-featured Sudoku game leveraging
           the public 'sugoku' API, a sliding grid puzzle that allows you to upload your own pictures,
           and an HTML5 Canvas game focus on dodging obstacles.`,
     sourceUrl: "https://github.com/Nomnivore/NMC-CIT190-Term-Project",

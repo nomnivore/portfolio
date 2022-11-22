@@ -1,6 +1,6 @@
 import React from "react"
-import { HiHome } from "react-icons/hi2"
-import { DiGithubBadge } from "react-icons/di"
+import { HiLink } from "react-icons/hi2"
+import { SiGit } from "react-icons/si"
 import { motion } from "framer-motion"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
@@ -98,7 +98,7 @@ export const Project = ({
             {badges.map((badge, idx) => (
               <span
                 key={badge}
-                className={`px-3 py-1.5 mb-1 rounded-full text-sm border-2 ${
+                className={`px-3 py-1 mb-1 rounded-full text-sm border-2 ${
                   badgeStyles[idx % badgeStyles.length]
                 }`}
               >
@@ -114,13 +114,13 @@ export const Project = ({
       <div className="flex gap-8 justify-left">
         {sourceUrl && (
           <ProjectLink to={sourceUrl}>
-            <DiGithubBadge size="24" />
+            <SiGit size="24" />
             View Source
           </ProjectLink>
         )}
         {liveUrl && (
           <ProjectLink to={liveUrl}>
-            <HiHome size="24" />
+            <HiLink size="24" />
             View Live
           </ProjectLink>
         )}
