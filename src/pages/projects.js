@@ -12,7 +12,7 @@ const projects = [
         not only as a way to demonstrate my abilities, but also learn some new skills
         along the way. Created using Gatsby and sprinkled with animations using Framer Motion, with a
         CI/CD pipeline to automatically build and publish live when changes submitted to the main branch.`,
-    sourceUrl: "#",
+    sourceUrl: "https://github.com/Nomnivore/portfolio",
     liveUrl: "/",
     image: "portfolio.png",
     badges:

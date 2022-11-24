@@ -10,8 +10,8 @@
 module.exports = {
   siteMetadata: {
     title: `KW`,
-    description: `Kyle's personal portfolio as a web developer. Built using Gatsby`,
-    author: `nomnivore`,
+    description: `Personal portfolio website built using Gatsby, Tailwind, and Framer Motion`,
+    author: `Kyle Warner`,
   },
   plugins: [
     `gatsby-plugin-image`,
