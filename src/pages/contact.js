@@ -12,7 +12,7 @@ const pageContent = {
   body: `If you'd like the latest copy of my resume or to chat about
         potential work, you can reach me at the following email address and
         I'll get back to you as soon as I can.`,
-  contactEmail: "myemail@mydomain.com",
+  contactEmail: "kyle@kylewarner.net",
   cardName: "Kyle Warner",
 }
 
@@ -82,7 +82,7 @@ const ContactPage = () => {
         >
           <div className="flex flex-col gap-2">
             <StaticImage
-              src="https://avatars.githubusercontent.com/u/6979410?v=4"
+              src="../images/headshot.png"
               alt="github profile avatar"
               className="rounded-full w-36 border-4 border-purple-800"
               placeholder="blurred"
