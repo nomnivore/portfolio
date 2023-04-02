@@ -12,11 +12,23 @@ const projects = [
         not only as a way to demonstrate my abilities, but also learn some new skills
         along the way. Created using Gatsby and sprinkled with animations using Framer Motion, with a
         CI/CD pipeline to automatically build and publish live when changes submitted to the main branch.`,
-    sourceUrl: "https://github.com/Nomnivore/portfolio",
+    sourceUrl: "https://github.com/nomnivore/portfolio",
     liveUrl: "/",
     image: "portfolio.png",
     badges:
       "HTML,Tailwind CSS,JavaScript,React,Gatsby,Framer Motion,GitHub Pages",
+  },
+  {
+    title: "TypeScript Project Creator",
+    desc: `This is a CLI tool I created to help solve the problem that configuring new TypeScript apps
+          can be very cumbersome, especially when you are trying to set up several tools to work in harmony around
+          the new ESM standard. <code>"create-ts-init"</code> creates a new TypeScript project with options for a pre-configured
+          Jest testing environment as well as ESLint and Prettier for linting and formatting. Ultimately, you get
+          a good developer experience for TypeScript out of the box in just a few seconds.`,
+    sourceUrl: "https://github.com/nomnivore/create-ts-init",
+    liveUrl: "https://www.npmjs.com/package/create-ts-init",
+    image: "create-ts-init.png",
+    badges: "TypeScript, Node.js, CLI, NPM Registry, Jest, ESLint",
   },
   {
     title: "React Training Module",
@@ -24,7 +36,7 @@ const projects = [
           for learning a new technology not previously covered in the program, including a lecture,
           demonstration, and short assessment. I created a module for learning React, setting up a
           development environment with Vite, and building a Tic-Tac-Toe game that demonstrates all learning outcomes.`,
-    sourceUrl: "https://github.com/Nomnivore/react-tictactoe",
+    sourceUrl: "https://github.com/nomnivore/react-tictactoe",
     liveUrl: "https://nomnivore.github.io/react-tictactoe/",
     image: "tictactoe.png",
     badges: "HTML,CSS,JavaScript,React,Vite,GitHub Pages,GitHub Wiki",
@@ -35,7 +47,7 @@ const projects = [
           CIT190 - JS & jQuery course at NMC. Games include a fully-featured Sudoku game leveraging
           the public 'sugoku' API, a sliding grid puzzle that allows you to upload your own pictures,
           and an HTML5 Canvas game focus on dodging obstacles.`,
-    sourceUrl: "https://github.com/Nomnivore/NMC-CIT190-Term-Project",
+    sourceUrl: "https://github.com/nomnivore/NMC-CIT190-Term-Project",
     liveUrl: "https://nomnivore.github.io/NMC-CIT190-Term-Project/",
     image: "arkade.png",
     badges: "HTML,CSS,JavaScript,jQuery,sugoku,Canvas,GitHub Pages",
