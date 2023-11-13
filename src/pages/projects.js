@@ -7,6 +7,40 @@ import { Project } from "../components/Project"
 // ? should this be converted to markdown
 const projects = [
   {
+    title: "Antrim County Bridge Club",
+    desc: `This club homepage was built as part of the capstone project for my degree at NMC. It is a full-stack
+          application with a custom CMS that allows the client to manage their own content,
+          including pages built with rich-text, a members directory, and a partner-finder system.
+          Over the course of the project, I led the team and developed the admin dashboard and
+          server architecture, as well as interfaced with the client to gather requirements and
+          receive feedback.`,
+    liveUrl: "https://antrimcountybridgeclub.com",
+    image: "acbc.png",
+    badges: "C#,ASP.NET Core,Entity Framework,MSSQL,Git/GitHub,Tailwind CSS",
+  },
+  {
+    title: "TypeScript Project Creator",
+    desc: `This is an open-source CLI tool I created to help solve the problem that configuring new TypeScript apps
+          can be very cumbersome, especially when you are trying to set up several tools to work in harmony around
+          the new ESM standard. <code>"create-ts-init"</code> creates a new TypeScript project with options for a pre-configured
+          Jest testing environment as well as ESLint and Prettier for linting and formatting. Ultimately, you get
+          a good developer experience for TypeScript out of the box in just a few seconds.`,
+    sourceUrl: "https://github.com/nomnivore/create-ts-init",
+    liveUrl: "https://www.npmjs.com/package/create-ts-init",
+    image: "create-ts-init.png",
+    badges: "TypeScript, Node.js, CLI, NPM Registry, Jest, ESLint",
+  },
+  {
+    title: "ollama.nvim",
+    desc: `An open-source plugin for Neovim that provides a simple way to connect your codebase to your own
+          locally ran LLMs using <b><a href='https://ollama.ai'>ollama.ai</a></b>. It is highly configurable
+          and allows you to write your own prompts, using context from your current buffer, to query the LLM
+          and display the results, insert or replace code, and more, all without leaving your editor.`,
+    sourceUrl: "https://github.com/nomnivore/ollama.nvim",
+    image: "ollama.nvim.png",
+    badges: "Lua,Neovim,Plugin,ollama.ai",
+  },
+  {
     title: "My Portfolio",
     desc: `You are here! Building upon my React fundamentals, I used this project
         not only as a way to demonstrate my abilities, but also learn some new skills
@@ -17,18 +51,6 @@ const projects = [
     image: "portfolio.png",
     badges:
       "HTML,Tailwind CSS,JavaScript,React,Gatsby,Framer Motion,GitHub Pages",
-  },
-  {
-    title: "TypeScript Project Creator",
-    desc: `This is a CLI tool I created to help solve the problem that configuring new TypeScript apps
-          can be very cumbersome, especially when you are trying to set up several tools to work in harmony around
-          the new ESM standard. <code>"create-ts-init"</code> creates a new TypeScript project with options for a pre-configured
-          Jest testing environment as well as ESLint and Prettier for linting and formatting. Ultimately, you get
-          a good developer experience for TypeScript out of the box in just a few seconds.`,
-    sourceUrl: "https://github.com/nomnivore/create-ts-init",
-    liveUrl: "https://www.npmjs.com/package/create-ts-init",
-    image: "create-ts-init.png",
-    badges: "TypeScript, Node.js, CLI, NPM Registry, Jest, ESLint",
   },
   {
     title: "React Training Module",
