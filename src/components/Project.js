@@ -109,7 +109,10 @@ export const Project = ({
         </div>
       </div>
       <div>
-        <p className="max-w-prose text-lg">{desc}</p>
+        <p
+          className="max-w-prose text-lg"
+          dangerouslySetInnerHTML={{ __html: desc }}
+        />
       </div>
       <div className="flex gap-8 justify-left">
         {sourceUrl && (
