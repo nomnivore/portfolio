@@ -53,6 +53,14 @@ const projects = [
       "HTML,Tailwind CSS,JavaScript,React,Gatsby,Framer Motion,GitHub Pages",
   },
   {
+    title: "parcrumb",
+    desc: `A simple, open-source, and lightweight parser combinator library for TypeScript. Ships with a full
+          suite of parsers for all kinds of common use-cases, and is easily extended with custom parsers. Developed
+          and tested using Bun, but published to NPM as a standalone package to use in any Bun/Node/browser environment.`,
+    sourceUrl: "https://github.com/normnivore/ollama.nvim",
+    badges: "TypeScript,Parsers,Testing,NPM Registry",
+  },
+  {
     title: "React Training Module",
     desc: `Created for CIT255 course at NMC. Groups were tasked with creating educational material
           for learning a new technology not previously covered in the program, including a lecture,
