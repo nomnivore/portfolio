@@ -10,7 +10,7 @@ import { MotionPage } from "../components/MotionPage"
 const pageContent = {
   title: "Kyle Warner",
   subtitle: "Full Stack Web Developer",
-  body: `Hi, I'm a US-based software development student graduating in May 2023 and currently
+  body: `Hi, I'm a US-based software development student graduating in May 2024 and currently
         seeking remote work. I have a passion for building intuitive user experiences
         and writing quality code that helps boost overall productivity. I'm always interested
         in learning new technologies and growing my skillset as a developer. Let's talk!`,
